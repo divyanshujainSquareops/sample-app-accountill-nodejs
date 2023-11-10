@@ -1,12 +1,10 @@
 # Node.js
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascrip
-
-
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javas
 trigger:
-- main
+  main
 
 pool:
-  name: Default
-  vmImage: ubuntu-latest
+ name: Default
+ 
