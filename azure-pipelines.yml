@@ -12,7 +12,7 @@ pool:
 
 jobs:
 - job: Build
-  displayName: 'Build Job'
+displayName: 'Build Job'
   steps:
   - task: NodeTool@0
     inputs:
