@@ -61,46 +61,47 @@ jobs:
       appType: 'webAppLinux'
       appName: 'WepApp-CI-CD-mern-app'
       package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+  
   - task: AzureAppServiceSettings@1
     inputs:
       azureSubscription: 'Free Trial(46dbdd8a-efee-4055-8cca-74f21476c43e)'
       appName: 'WepApp-CI-CD-mern-app'
       resourceGroupName: 'multi-instance-resource-group'
       appSettings: |
-      [
-        {
-          "name": "DB_URL",
-          "value": "mongodb+srv://deepujain:Deepu@6387!@cluster0.ziwayyo.mongodb.net/?retryWrites=true&w=majority",
-          "slotSetting": false
-        },
-        {
-          "name": "PORT",
-          "value": "5000",
-          "slotSetting": false
-        },
-        {
-          "name": "SECRET",
-          "value": "12345678",
-          "slotSetting": false
-        },
-        {
-          "name": "SMTP_HOST",
-          "value": "deepujain",
-          "slotSetting": false
-        },
-        {
-          "name": "SMTP_PASS",
-          "value": "",
-          "slotSetting": false
-        },
-        {
-          "name": "SMTP_PORT",
-          "value": "1234",
-          "slotSetting": false
-        },
-        {
-          "name": "SMTP_USER",
-          "value": "deepu",
-          "slotSetting": false
-        }
-      ]
+        [
+          {
+            "name": "DB_URL",
+            "value": "mongodb+srv://deepujain:Deepu@6387!@cluster0.ziwayyo.mongodb.net/?retryWrites=true&w=majority",
+            "slotSetting": false
+          },
+          {
+            "name": "PORT",
+            "value": "5000",
+            "slotSetting": false
+          },
+          {
+            "name": "SECRET",
+            "value": "12345678",
+            "slotSetting": false
+          },
+          {
+            "name": "SMTP_HOST",
+            "value": "deepujain",
+            "slotSetting": false
+          },
+          {
+            "name": "SMTP_PASS",
+            "value": "",
+            "slotSetting": false
+          },
+          {
+            "name": "SMTP_PORT",
+            "value": "1234",
+            "slotSetting": false
+          },
+          {
+            "name": "SMTP_USER",
+            "value": "deepu",
+            "slotSetting": false
+          }
+        ]
